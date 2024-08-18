@@ -2,13 +2,6 @@ name: Digger Workflow
 
 on:
   workflow_dispatch:
-    inputs:
-      spec:
-        required: true
-      run_name:
-        required: true
-
-run-name: ${{inputs.run_name}}
 
 jobs:
   digger-job:
@@ -27,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: diggerhq/digger@v0.4.17
         with:
-          digger-spec: ${{inputs.spec}}
+          # digger-spec: ${{inputs.spec}}
           setup-aws: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
