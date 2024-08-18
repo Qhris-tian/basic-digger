@@ -1,7 +1,10 @@
-project:
+projects:
   - name: basic-digger
     dir: .
     workspace: default
+    init:
+      commands:
+        - terraform init
     plan:
       commands:
         - terraform plan
@@ -12,6 +15,4 @@ project:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-1
-    trigger:
-      branch: main
-      event: push
+
