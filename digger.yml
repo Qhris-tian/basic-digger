@@ -2,6 +2,9 @@ projects:
   - name: basic-digger
     dir: .
     workspace: default
+    init:
+      commands:
+        - terraform init
     plan:
       commands:
         - terraform plan
