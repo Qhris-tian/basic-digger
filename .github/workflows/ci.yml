@@ -19,7 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: diggerhq/digger@vLatest
+      - name: Run Digger
+        uses: diggerhq/digger@vLatest
         with:
           digger-spec: .digger.yml
           setup-aws: true

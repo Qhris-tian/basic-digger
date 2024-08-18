@@ -4,10 +4,10 @@ project:
     workspace: default
     plan:
       commands:
-        - terraform plan -out=tfplan
+        - terraform plan
     apply:
       commands:
-        - terraform apply tfplan
+        - terraform apply
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
