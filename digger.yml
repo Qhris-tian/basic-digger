@@ -1,4 +1,3 @@
 projects:
-  - name: basic-digger
-    dir: .
-
+  - name: production
+    dir: prod
