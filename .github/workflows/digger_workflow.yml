@@ -15,12 +15,12 @@ jobs:
       statuses: write
 
     steps:
-      - name: digger run ${{github.event.inputs.id}}
-        run: echo digger run ${{ inputs.id }}
-      - uses: actions/checkout@v4
-      - uses: diggerhq/digger@v0.4.17
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Digger
+        uses: diggerhq/digger@v0.4.17
         with:
-          # digger-spec: ${{inputs.spec}}
           setup-aws: true
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
